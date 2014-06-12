@@ -15,7 +15,7 @@ rhc setup
 #Creation d'une application PHP et ajout des extensions mysql et phpmyadmin pour gérer la base de données
 rhc app create -a dossierOS -r /git/repo -t php-5.3 -t mysql-5.5 -t phpmyadmin
 
-# Ajout manuel de la base de donnees
+# Ajout manuel de la base de donnees et reglages des parametres dans le fichier const.php
 #Ajout de la cle SSH pour lier Openshift a Github
 set ssh://536a4da04382ecb232000018@dossieros-wkerrand.rhcloud.com/~/git/dossieros.git/ dossierOS admin71IshSFn 2ZyDK7anjqJy
 
