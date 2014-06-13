@@ -26,12 +26,10 @@ set ssh://536a4da04382ecb232000018@dossieros-wkerrand.rhcloud.com/~/git/dossiero
 #  - Spécifier l'argument demandé avant de 'commit' (./deploy.sh file.txt ) 
 #  - 'Push' le travail seulement apres avoir clone
 
-PS3="Pick an option (1-6):" 
+PS3="Pick an option (1-4):" 
 select i in Init Clone Add Commit Push Exit; do
 	case $i in 
-		Init) git init;;
-		Clone) git clone https://github.com/wkerrand/Openshift-project.git; echo '<?php define("DB_HOST", "localhost"); define("DB_LOGIN", "'$2'"); define("DB_PASS", "'$3'"); define("DB_BDD", "'$1'");  ?>' > config.php;;
- 		Add) git add $1;;
+		Add) git add ;;
  		Commit) git commit -m "Some changes have been added to the project, please refer to the author for more details.";;
 		Push) git push origin master;; 
 		Exit) echo "Goodbye!"; break;;
